@@ -1,0 +1,8 @@
+li{
+    list-style: none;
+    display: inline;
+    margin: 0px 10px;
+}
+.round{
+    border-radius: 100px ;
+}

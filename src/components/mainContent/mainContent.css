@@ -1,0 +1,43 @@
+.mainContent{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    grid-gap: 10px;
+}
+.card{
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    outline: 0;
+    box-shadow: 2px 5px 5px 1px lightgrey;
+}
+ .card_img{
+    object-fit: contain;
+}
+.card_header{
+    font-size: 14px;
+    text-align: center;
+}
+.card_header .price{
+    text-align: left;
+    font-weight: bold;
+}
+#currency{
+    font-weight: bolder;
+    margin-left: 20px;
+}
+.btn{
+    padding: 10px 80px;
+    margin-bottom: 10px;
+    background-color: lightgrey;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 2px solid lightgrey;
+    background-color: white;
+}
+.descr{
+    padding: 0px 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
