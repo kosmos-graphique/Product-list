@@ -16,10 +16,16 @@ export default function Header(){
                     <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link" href="#">Features</a>
+                    <a className="nav-link" href="#">Men</a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link" href="#">Pricing</a>
+                    <a className="nav-link" href="#">Women</a>
+                    </li>
+                    <li className="nav-item">
+                    <a className="nav-link" href="#">Kids</a>
+                    </li>
+                    <li className="nav-item">
+                    <a className="nav-link" href="#">Discover</a>
                     </li>
                 </ul>
                 <div className="container-fluid">
@@ -31,13 +37,11 @@ export default function Header(){
                     </form>
                 </div>
                 <div className="d-flex align-items-center">
-                    <button type="button" className="btn btn-light px-3 me-2">
-                        Login
-                    </button>
-                    <button type="button" className="btn btn-light me-3">
-                        Sign up
-                    </button>
+                    <button className="mx-2 btn1"><i className="fa fa-shopping-bag"></i></button>
+                    <button className="mx-2 btn1"><i className="fa fa-bookmark"></i></button>
+                    <button className="mx-2 btn1"><i className="fa fa-user"></i></button>
                 </div>
+                    
             </div>
         </nav>
     );
