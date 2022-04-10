@@ -1,0 +1,10 @@
+.main_container{
+    /* position: relative; */
+    display: grid;
+    grid-template-columns: repeat(5, 250px);
+    grid-gap: 15px;
+    margin: 10px;
+}
+a{
+    text-decoration: none;
+}

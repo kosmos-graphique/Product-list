@@ -133,7 +133,7 @@ const product_card = [
         image: "https:\/\/wforwoman.gumlet.io\/product\/20FEW13379-114230\/300\/20FEW13379-114230.jpg"
     },
     {
-        id_product: "62381",
+        id_product: "62382",
         name: "Blush Pink Kurta",
         price: "2299",
         description: "Blush pink kurta with guzette and piping details at sides and geometric embroidery at yoke. ",

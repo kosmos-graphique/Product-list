@@ -2,7 +2,8 @@ import React from "react";
 import product_card from "../../data/product_data";
 import "./mainContent.css"
 
-const main_content = ()=> {
+
+const Main_content = ()=> {
     //console.log(product_card);
     const listItems = product_card.map((item)=>
         <div className="card" key={item.id_product}>
@@ -19,11 +20,10 @@ const main_content = ()=> {
     );
     return (
         <>
-            <h2>Women wear</h2>
             <div className="mainContent">
                 {listItems}
             </div>
         </>
     );
 }
-export default main_content;
+export default Main_content;

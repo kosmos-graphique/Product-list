@@ -2,8 +2,9 @@
     box-sizing: border-box;
 }
 .mainContent{
+    box-sizing: border-box;
     display: grid;
-    grid-template-columns: repeat(4, 24%);
+    grid-template-columns: repeat(5, 250px);
     grid-gap: 15px;
     margin: 10px;
 }
@@ -16,10 +17,11 @@
 }
 .card_img:hover{
     transform: scale(1.1);
+    z-index: 3;
     transition: all 0.5s ease-in-out;
 }
 .card_img img{
-    z-index: 2;
+    height: 100%;
     width: 100%;
     border-radius: 8px 8px 0px 0px;
 }
@@ -36,13 +38,18 @@
     margin-left: 20px;
 }
 .btn{
-    padding: 10px 80px;
+    padding: 10px 60px;
     margin-bottom: 10px;
     background-color: lightgrey;
     text-transform: uppercase;
     font-weight: 700;
     border: 2px solid lightgrey;
     background-color: white;
+}
+.btn:hover{
+    background-color: lightseagreen;
+    border: 2px solid lightseagreen;
+    transition: all 500ms ease-in-out;
 }
 .descr{
     padding: 0px 10px;
