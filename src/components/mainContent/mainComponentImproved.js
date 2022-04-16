@@ -8,53 +8,53 @@ function MainComponenetImroved() {
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState([]);
   
-    // Note: the empty deps array [] means
-    // this useEffect will run once
-    // similar to componentDidMount()
     useEffect(() => {
-      fetch("https://mocki.io/v1/32698683-768e-41b2-a040-bc6be322cd94")
+      setIsLoaded(true);
+      fetch("https://pim.wforwoman.com/pim/pimresponse.php/?service=category&store=1&url_key=top-wear-kurtas&page=1&count=30&sort_by=&sort_dir=desc&filter=")
         .then(res => res.json())
         .then(
           (result) => {
-            setIsLoaded(true);
-            setItems(result);
+            setIsLoaded(false);
+            setItems(result.result.products);
           },
-          // Note: it's important to handle errors here
-          // instead of a catch() block so that we don't swallow
-          // exceptions from actual bugs in components.
+
           (error) => {
-            setIsLoaded(true);
+            setIsLoaded(false);
             setError(error);
           }
         )
     },[])
-  
-    if (error) {
-      return <div>Error: {error.message}</div>;
-    } else if (!isLoaded) {
-      return <div>Loading...</div>;
-    } else {
-      return (
-          <>
-          {items.map(item => (
-            <div className="mainContent">
-                <div className="card" key={item.id_product}>
-                  <div className="card_img">
-                      <img src={item.image} alt="image"/>
-                  </div>
-                  <div className="card_header">
-                    <h3>{item.name}</h3>
-                    <p className="descr">{item.description}</p>
-                    <p className="price"><span id="currency">₹ </span>{item.price}</p>
-                    <button className="btn">Add to cart</button>
-                  </div>
+    // console.log(items);
+  return(
+    <>
+      {
+        error?<div>
+          {error.message}
+        </div> : isLoaded?
+        <div>Loading...</div>:
+        items && items.length>0 && items.map((item)=>{
+          return (
+              <>
+                <div className="mainContent">
+                    <div className="card" key={item.id_product}>
+                      <div className="card_img">
+                          <img src={item.image} alt="image"/>
+                      </div>
+                      <div className="card_header">
+                        <h3>{item.name}</h3>
+                        <p className="descr">{item.description}</p>
+                        <p className="price"><span id="currency">₹ </span>{item.price}</p>
+                        <button className="btn">Add to cart</button>
+                      </div>
+                    </div>
                 </div>
-            </div>
-            )
-          )}
-          </>
-        );
-    }
+              </>
+            );
+        })
+      }  
+    </>
+  )
+   
 }
 
 export default MainComponenetImroved;

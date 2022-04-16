@@ -11,7 +11,7 @@ function App() {
       <div className="main_container">
         <MainComponenetImroved/>
       </div>
-      <Main_content/>
+      {/* <Main_content/> */}
 
       <Footer/>
     </div>
